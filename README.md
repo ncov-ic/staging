@@ -24,7 +24,7 @@ sudo ./provision/setup-vault
 First, login to the vault and arrage credentials
 
 ```
-./scripts/vault-login
+./scripts/vault-prepare
 ```
 
 then
