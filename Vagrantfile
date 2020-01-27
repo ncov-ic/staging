@@ -1,7 +1,7 @@
 Vagrant.require_version ">= 1.8.2"
 
 domain = 'localdomain'
-box = "bento/ubuntu-16.04"
+box = "bento/ubuntu-18.04"
 ram_size_mb = '16384'
 data_disk_size_gb = 100
 
