@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+if [ `id -u` -eq 0 ]; then
+    echo "This script is designed to be run by an ordinary user"
+    exit 1
+fi
+
+pip3 install --user orderly-web
+
+git clone https://github.com/ncov-ic/ncov-orderly-web
+orderly-web start ncov-orderly-web/config --extra testing
+
+git clone https://github.com/ncov-ic/ncov-orderly

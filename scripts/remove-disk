@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e
+VAGRANT_DISK=disk.vdi
+if [ -f $VAGRANT_DISK ]; then
+    vboxmanage closemedium disk $VAGRANT_DISK --delete
+fi

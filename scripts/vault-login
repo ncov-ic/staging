@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -e
+HERE=$(dirname $(realpath $0))
+ROOT=$(dirname $HERE)
+DEST="$ROOT/shared/.vault_token"
+export VAULT_ADDR=https://vault.dide.ic.ac.uk:8200
+vault login -method=github -token-only > "$ROOT/shared/.vault_token"
+echo "Vault token saved to $DEST"
